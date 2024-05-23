@@ -1,0 +1,107 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fondo{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/fondo1.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: absolute;
+    filter: brightness(80%);
+
+}
+
+
+.content{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    min-width: 70vw;
+    max-width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid transparent;
+    padding: 1rem;
+    
+}
+
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    backdrop-filter: blur(2px); 
+    filter: brightness(40%);
+    border-radius: inherit; 
+    z-index: -1; 
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.601); 
+    mask: linear-gradient(
+    to right,
+    transparent 0%,
+    white 5%,
+    white 95%,
+    transparent 100%
+  );
+  }
+
+
+
+.title{
+    color: white;
+    filter: brightness(400%);
+    font-weight: 200;
+    font-size: clamp(2rem, 15vw, 6rem);
+    font-family: "Montserrat", sans-serif;
+}
+.subtitle{
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 2rem;
+}
+.text{
+    color: white;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.text2{
+    color: white;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+
+
+.botton{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    bottom: 10vh;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: 1px solid red;
+}
