@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-
       <Page1/>
       <Page2/>
     </main>

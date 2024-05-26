@@ -23,7 +23,7 @@ export default function Page2() {
   };
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} id="target-section" >
 
       <div className={styles.container}>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id maxime corporis similique dicta nostrum corrupti in cupiditate! Dolorum amet provident temporibus adipisci rerum. Ipsum vero blanditiis repellendus consequuntur soluta doloremque!</p>
