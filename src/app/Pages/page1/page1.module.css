@@ -112,7 +112,7 @@
     padding: 0.5rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    animation: lat 3s ease-in-out infinite;
+    /* animation: lat 3s ease-in-out infinite; */
 }
 .botton::before {
     content: "";
