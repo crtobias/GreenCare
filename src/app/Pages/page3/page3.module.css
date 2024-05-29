@@ -2,26 +2,43 @@
     width: 100vw;
     min-height: 100vh;
     margin: 0px;
-    padding: 1rem;
+    padding: 0px;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(143, 141, 138);
+    /* border: 1px solid green; */
+}
+.fondo{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/a_group_of_bamboo_trees_01.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1000;
+    position: absolute;
+
+
+    filter: blur(2px);
 
 }
-
-
 .carousel {
     position: relative;
-    width: 80%;
-    height: 90vh;
-    margin: auto;
+    width: 90vw;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid blue; */
+    color: white;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    flex-direction: column;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .carouselSlide {
@@ -45,16 +62,16 @@
 }
 
 .carouselButton {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(68, 68, 68, 0.672);
     color: white;
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
+    top: 95%;
     transform: translateY(-50%);
+    position: absolute;
 }
 
 .carouselButton:first-of-type {
@@ -64,3 +81,88 @@
 .carouselButton:last-of-type {
     right: 10px;
 }
+
+.txt{
+    width: 90vw;
+    padding: 1rem;
+    /* border: 1px solid red; */
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+.txtt{
+    color: white;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.title{
+    color: white;
+    filter: brightness(400%);
+    font-weight: 200;
+    font-size: clamp(2rem, 6vw, 4rem);
+}
+
+
+@media (width >= 1024px) {
+    .main{
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* border: 1px solid green; */
+        justify-content: space-around;
+    }
+    .carousel {
+        position: relative;
+        width: 40vw;
+        height: 70vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid blue; */
+        color: white;
+        font-weight: 200;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
+    .txt{
+        width: 40vw;
+        height: 70vh;
+        padding: 1rem;
+        /* border: 1px solid red; */
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        border: 1px solid white;
+    }
+    
+}
+
+
+.txt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    backdrop-filter: blur(2px); 
+    filter: brightness(40%);
+    border-radius: inherit; 
+    z-index: -1; 
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.601); 
+    mask: linear-gradient(
+    to right,
+    transparent 0%,
+    white 5%,
+    white 95%,
+    transparent 100%
+  );
+  }

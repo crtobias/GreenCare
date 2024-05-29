@@ -46,15 +46,15 @@ const Carousel = () => {
 
     return (
         <div className={styles.carousel}>
-            <button onClick={prevSlide} className={styles.carouselButton}>{"<"}</button>
             <div className={styles.carouselSlide}>
                 <img  src={species[currentIndex].image} alt={species[currentIndex].name} />
                 <div className={styles.carouselCaption}>
                     <h3>{species[currentIndex].name}</h3>
                     <p>{species[currentIndex].description}</p>
                 </div>
-            </div>
+            <button onClick={prevSlide} className={styles.carouselButton}>{"<"}</button>
             <button onClick={nextSlide} className={styles.carouselButton}>{">"}</button>
+            </div>
         </div>
     );
 };
@@ -62,9 +62,12 @@ const Carousel = () => {
 export default function Page3() {
     return (
         <main className={styles.main}>
-            <h2>Especies en Peligro de Extinción</h2>
-            <p>La actividad humana ha llevado a muchas especies al borde de la extinción. La caza furtiva, la destrucción de hábitats, la contaminación y el cambio climático, causados en gran medida por nuestras acciones, han puesto en riesgo la biodiversidad de nuestro planeta. Cada especie que desaparece rompe el equilibrio de nuestro ecosistema, afectando no solo a la naturaleza, sino también a nosotros mismos. Es nuestra responsabilidad tomar conciencia y actuar para proteger y preservar la vida silvestre, antes de que sea demasiado tarde.</p>
+            <div className={styles.txt}>
+                <h2 className={styles.title}>Especies en Peligro de Extinción</h2>
+                <p className={styles.txtt}>La actividad humana ha llevado a muchas especies al borde de la extinción. La caza furtiva, la destrucción de hábitats, la contaminación y el cambio climático, causados en gran medida por nuestras acciones, han puesto en riesgo la biodiversidad de nuestro planeta. Cada especie que desaparece rompe el equilibrio de nuestro ecosistema, afectando no solo a la naturaleza, sino también a nosotros mismos. Es nuestra responsabilidad tomar conciencia y actuar para proteger y preservar la vida silvestre, antes de que sea demasiado tarde.</p>
+            </div>
             <Carousel />
+            <div className={styles.fondo}></div>
         </main>
     );
 }
